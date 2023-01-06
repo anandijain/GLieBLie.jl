@@ -2,7 +2,7 @@
 
 using openai/whisper and mozilla/tts to fine tune a tts model on [runforthecube](https://www.youtube.com/@runforthecube)'s channel
 
-demo:
+[demo](https://www.youtube.com/watch?v=V0xzLlTEFSQ)
 ```julia
 using GLieBLie
 # this one takes like 10 minutes 
@@ -20,12 +20,17 @@ video_url = "https://www.youtube.com/watch?v=BaW_jenozKc"
 GLieBLie.doit(video_url, outdir)
 ```
 
+
+
+
 we have the overlaying of tts on an existing video working.
 
 next steps use yark or normal youtube-dl to download the entire runforthecube archive and fine tune mozilla/tts on it 
 
 todo try tts/
  --reference_wav 
+it would be interesting to try to fine tune multispeaker, ie, we know what runforthecube sounds like and could identify it
+given a random piece of audio.
 
 
 try just `tts`ing the entire transcript at once and perform a single timestretch, instead of chopping up the srt and stretching each line. 
