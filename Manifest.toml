@@ -188,7 +188,7 @@ uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
 
 [[deps.Subtitles]]
 deps = ["Dates", "Test"]
-path = "../Subtitles.jl"
+path = "/Users/anand/.julia/dev/Subtitles"
 uuid = "01768123-4864-4971-be3c-4307d34eee02"
 version = "0.1.0"
 
