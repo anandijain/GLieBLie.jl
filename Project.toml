@@ -1,0 +1,14 @@
+name = "GLieBLie"
+uuid = "5e7bdd0d-9cea-4ef8-9e9b-f4232eb1ffb0"
+authors = ["anand jain <33790004+anandijain@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+OpenAI = "e9f21f70-7185-4079-aca2-91159181367c"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+Subtitles = "01768123-4864-4971-be3c-4307d34eee02"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+WAV = "8149f6b0-98f6-5db9-b78f-408fbbb8ef88"
