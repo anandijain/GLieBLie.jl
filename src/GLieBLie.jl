@@ -130,7 +130,7 @@ end
 
 function doit(video_url, outdir)
     path_template = joinpath(outdir, "%(id)s.%(ext)s")
-    ytdl_cmd = `youtube-dl -o $path_template $video_url`
+    ytdl_cmd = `yt-dlp -o $path_template $video_url`
     run(ytdl_cmd)
     # @assert !ispath(outdir)
     # mkpath(outdir)

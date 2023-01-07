@@ -15,7 +15,7 @@ jobs:
           cache: 'pip'
           cache-dependency-path: |
             **/requirements.txt
-      - run: pip install whisper TTS ffmpeg youtube-dl
+      - run: pip install whisper TTS ffmpeg youtube-dl yt-dlp
       - run: sudo apt-get install libsndfile1 ffmpeg
       - uses: julia-actions/setup-julia@v1
         with:
