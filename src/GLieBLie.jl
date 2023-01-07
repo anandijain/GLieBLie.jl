@@ -11,10 +11,11 @@ using Pkg
 function __init__()
     ENV["PYTHON"] = ""
     Pkg.build("PyCall")
-    Conda.add(["librosa", "numpy", "scipy", "youtube-dl"]) 
+    Conda.add(["librosa", "numpy", "scipy", "youtube-dl", "yt-dlp"]) 
 
     global LIBROSA = pyimport("librosa")
     global YOUTUBE_DL = pyimport("youtube_dl")
+    global YT_DLP = pyimport("yt_dlp")
 end
 
 """
@@ -130,12 +131,12 @@ end
 
 function doit(video_url, outdir)
     path_template = joinpath(outdir, "%(id)s.%(ext)s")
-    ytdl_cmd = `yt-dlp -o $path_template $video_url`
+    ytdl_cmd = `yt-dlp --quiet -o $path_template $video_url`
     run(ytdl_cmd)
     # @assert !ispath(outdir)
     # mkpath(outdir)
   
-    ydl= YOUTUBE_DL.YoutubeDL()
+    ydl = YT_DLP.YoutubeDL()
     info = ydl.extract_info(video_url, download=false)
   
     title = string(info["id"], ".", info["ext"])
