@@ -130,7 +130,7 @@ function realign(srt, outdir, components_path)
 end
 
 function doit(video_url, outdir)
-    path_template = joinpath(outdir, "%(id)s.%(ext)s")
+    path_template = "%(id)s.%(ext)s"
     ytdl_cmd = `yt-dlp --quiet -o $path_template $video_url`
     run(ytdl_cmd)
     # @assert !ispath(outdir)
@@ -141,6 +141,7 @@ function doit(video_url, outdir)
   
     title = string(info["id"], ".", info["ext"])
     video_path = joinpath(outdir, title)
+    mv(title, video_path)
     @info video_path
     overlay_tts(video_path, outdir)
     @test isfile(video_path)
