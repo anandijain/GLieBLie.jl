@@ -12,10 +12,10 @@ using Pkg
 function __init__()
     ENV["PYTHON"] = ""
     Pkg.build("PyCall")
-    Conda.add(["librosa", "numpy", "scipy", "yt-dlp", "whisper", "TTS"]) 
+    Conda.add(["librosa", "numpy", "scipy", "youtube-dl"]) 
 
     global LIBROSA = pyimport("librosa")
-    global YOUTUBE_DL = pyimport("yt-dlp")
+    global YOUTUBE_DL = pyimport("youtube_dl")
 end
 
 """
