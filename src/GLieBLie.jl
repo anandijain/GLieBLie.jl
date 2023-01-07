@@ -1,7 +1,6 @@
 module GLieBLie
 
 using Subtitles, Test
-using OpenAI
 using WAV
 using Dates
 
