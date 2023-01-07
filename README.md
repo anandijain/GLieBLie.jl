@@ -36,3 +36,6 @@ next steps use yark or normal youtube-dl to download the entire runforthecube ar
 
 known issues:
 tts/ doesn't seem to build on M1, because their dependencies are super bloated 
+
+
+yark new runforthecube https://www.youtube.com/@runforthecube
