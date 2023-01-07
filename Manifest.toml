@@ -647,7 +647,9 @@ version = "0.3.0"
 
 [[deps.Subtitles]]
 deps = ["Dates", "Test"]
-path = "/Users/anand/.julia/dev/Subtitles"
+git-tree-sha1 = "6d5d5b0c574d216b6c437b352ad2e5b59cf6ebb8"
+repo-rev = "main"
+repo-url = "https://github.com/anandijain/Subtitles.jl"
 uuid = "01768123-4864-4971-be3c-4307d34eee02"
 version = "0.1.0"
 
